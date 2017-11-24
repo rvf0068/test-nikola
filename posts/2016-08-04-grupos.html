@@ -1,0 +1,202 @@
+---
+layout: post
+title: Grupos
+date: 2016-08-04 15:00 -0500 
+comments: true
+published: true
+categories: 
+tags: mathjax
+---
+
+
+
+<div id="outline-container-org787f9bf" class="outline-2">
+<h2 id="org787f9bf"><span class="section-number-2">1</span> Definición de grupo</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-orgd2e6807" class="outline-3">
+<h3 id="orgd2e6807"><span class="section-number-3">1.1</span> Grupos</h3>
+<div class="outline-text-3" id="text-1-1">
+</div><ol class="org-ol"><li><a id="org6064d4d"></a>Grupo<br  /><div class="outline-text-4" id="text-1-1-1">
+<p>
+Un <b>grupo</b> es un conjunto \(G\) junto con una operación binaria
+\(G\times G\to G\), \((a,b)\mapsto ab\), tal que:
+</p>
+<ul class="org-ul">
+<li>\((ab)c=a(bc)\) para todos \(a,b,c\in G\)</li>
+<li>existe un elemento \(1\in G\) tal que \(a1=1a=a\) para todo
+\(a\in G\)</li>
+<li>para todo \(a\in G\) existe un elemento \(a^{-1}\in G\) tal que
+\(aa^{-1}=a^{-1}a=1\).</li>
+</ul>
+</div></li></ol>
+</div>
+
+<div id="outline-container-org48d87fb" class="outline-3">
+<h3 id="org48d87fb"><span class="section-number-3">1.2</span> Ejemplos</h3>
+<div class="outline-text-3" id="text-1-2">
+</div><ol class="org-ol"><li><a id="orgaad9a64"></a>Ejemplos de grupos<br  /><div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li>Sea \(X\) un conjunto. Sea \(S_{X}\) el conjunto:
+\[
+      S_{X}=\{f\colon X\to X\mid \text{\(f\) es biyectiva}\}.
+      \]
+Entonces \(S_{X}\) es un grupo con la operación de composición.</li>
+<li>En el caso de que \(X=\{1,2,\ldots,n\}\), denotaremos a
+\(S_{X}\) como \(S_{n}\). \(S_{n}\) se llama <b>grupo simétrico</b>.</li>
+</ul>
+</div></li></ol>
+</div>
+
+<div id="outline-container-org5cae3eb" class="outline-3">
+<h3 id="org5cae3eb"><span class="section-number-3">1.3</span> </h3>
+<div class="outline-text-3" id="text-1-3">
+</div><ol class="org-ol"><li><a id="org958f09c"></a>Otros ejemplos<br  /><div class="outline-text-4" id="text-1-3-1">
+<ul class="org-ul">
+<li>Sean \(n\) un número natural y \(F\) un campo (como por ejemplo
+\(\mathbb{Q}, \mathbb{R}, \mathbb{C}\)). El conjunto
+\(\mathrm{GL}_{n}(F)\) de matrices cuadradas \(n\times n\)
+invertibles es un grupo con la operación producto de matrices.</li>
+<li>Sea \(V\) un espacio vectorial y \(\mathrm{GL}(V)\) el conjunto
+de transformaciones lineales invertibles \(V\to V\). Entonces
+\(\mathrm{GL}(V)\) es un grupo con la operación de composición.</li>
+<li><p>
+Sea 
+\(G=\{\unicode{x263a},\bigtriangleup\}\). La tabla:
+</p>
+<table id="orgbb09f43" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">\(\cdot\)</th>
+<th scope="col" class="org-left"> \(\unicode{x263a}\)</th>
+<th scope="col" class="org-left">\(\bigtriangleup\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"> \(\unicode{x263a}\)</td>
+<td class="org-left"> \(\unicode{x263a}\)</td>
+<td class="org-left">\(\bigtriangleup\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(\bigtriangleup\)</td>
+<td class="org-left">\(\bigtriangleup\)</td>
+<td class="org-left"> \(\unicode{x263a}\)</td>
+</tr>
+</tbody>
+</table>
+<p>
+define una estructura de grupo en \(G\).
+</p></li>
+<li>Si \(\omega\in \mathbb{C}\) es una raíz primitiva \(n\)-ésima de la unidad,
+entonces \(C_{n}=\{1,\omega,\omega^{2},\ldots,\omega^{n-1}\}\)
+es un grupo bajo la multiplicación de números complejos.</li>
+</ul>
+</div></li></ol>
+</div>
+
+<div id="outline-container-org8101d26" class="outline-3">
+<h3 id="org8101d26"><span class="section-number-3">1.4</span> Definiciones sobre grupos</h3>
+<div class="outline-text-3" id="text-1-4">
+</div><ol class="org-ol"><li><a id="org47cb64f"></a>Varias definiciones<br  /><div class="outline-text-4" id="text-1-4-1">
+<ul class="org-ul">
+<li>Si se tiene que \(ab=ba\) para todos \(a,b\in G\), decimos que
+el grupo \(G\) es <b>abeliano</b>.</li>
+<li>Nota: Si el grupo \(G\) es abeliano, se acostumbra usar
+<b>notación aditiva</b>, es decir, la operación se escribe \(a+b\) y
+el neutro como \(0\).</li>
+<li>Si el conjunto subyacente un grupo es finito, decimos que el
+grupo es <b>finito</b>.</li>
+<li>Si el grupo \(G\) es finito, la cantidad de sus elementos se
+llama el <b>orden</b> de \(G\), y lo denotamos \(|G|\).</li>
+</ul>
+</div></li></ol>
+</div>
+</div>
+
+<div id="outline-container-org1d458f4" class="outline-2">
+<h2 id="org1d458f4"><span class="section-number-2">2</span> Propiedades elementales de los grupos</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-org46e91cb" class="outline-3">
+<h3 id="org46e91cb"><span class="section-number-3">2.1</span> Propiedades elementales</h3>
+<div class="outline-text-3" id="text-2-1">
+</div><ol class="org-ol"><li><a id="orga5ad24e"></a>Propiedades<br  /><div class="outline-text-4" id="text-2-1-1">
+<p>
+En adelante, sean \(G\) un grupo, \(a,b,c\in G\) y \(m,n\in
+    \mathbb{Z}\). 
+</p>
+
+<ul class="org-ul">
+<li>(Ley de cancelación) Si \(ab=ac\), o bien si \(ba=ca\), entonces
+\(b=c\).</li>
+<li>(Unicidades) La operación de un grupo tiene un único
+neutro. Todo elemento tiene un único inverso.</li>
+<li>(Asociatividad generalizada) Todas las maneras de escribir
+paréntesis para realizar el producto de los elementos
+\(a_{1},a_{2},\ldots,a_{n}\in G\), en tal orden, llevan al mismo
+resultado.</li>
+<li>Por lo tanto, tal producto se denota \(a_{1}a_{2}\cdots a_{n}\).</li>
+<li>En particular, el producto \(aa\cdots a\) con \(n\) factores, se
+denota \(a^{n}\), y \((a^{n})^{-1}\) se denota \(a^{-n}\).</li>
+<li>(Leyes de los exponentes) \(a^{m}a^{n}=a^{m+n}\),
+\((a^{m})^{n}=a^{mn}\).</li>
+</ul>
+</div></li></ol>
+</div>
+
+<div id="outline-container-org764e6b8" class="outline-3">
+<h3 id="org764e6b8"><span class="section-number-3">2.2</span> Ejercicios 1</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Demuestra que en cualquier grupo \(G\) se tiene
+\((ab)^{-1}=b^{-1}a^{-1}\) para todos \(a,b\in G\).</li>
+<li>Sea \(S=\mathbb{R}-\{-1\}\). Definimos la operación \(*\) en
+\(S\) como:
+\[
+      a*b = a+b+ab.
+      \]
+Demuestra que \((S,*)\) es un grupo.</li>
+<li>Si \(G\) es un grupo, demuestra que existe un único \(a\in G\)
+tal que \(a^{2}=a\).</li>
+<li>Si \(G\) es un grupo tal que \(a=a^{-1}\) para todo \(a\in G\),
+demuestra que \(G\) es abeliano.</li>
+<li>Si \(G\) es un grupo tal que \(|G|\in\{2,3\}\), demuestra que
+\(G \) es abeliano.</li>
+<li>Sea \(G\) un grupo finito con \(|G|\) par. Demuestra que existe
+\(a\in G\), \(a\ne 1\) tal que \(a^{2}=1\).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1d5e808" class="outline-3">
+<h3 id="org1d5e808"><span class="section-number-3">2.3</span> Ejercicios 2</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Sea \(G\) un conjunto con una operación binaria asociativa tal
+que existe un elemento \(1\in G\) tal que \(a1=a\) para todo
+\(a\in G\), y dado \(a\in G\), existe \(a^{-1}\in G\) tal que
+\(aa^{-1}=1\). Demuestra que \(G\) con tal operación binaria es
+un grupo.</li>
+<li>Muestra con un ejemplo que si en el ejercicio anterior cambiamos
+la condición \(a1=a\) por \(1a=a\), entonces no necesariamente es
+\(G\) un grupo.</li>
+<li>Demuestra que si el grupo \(G\) es abeliano, entonces
+\((ab)^{n}=a^{n}b^{n}\) para todos \(a,b\in G\) y \(n\in
+     \mathbb{Z}\).</li>
+<li>Demuestra que si \(G_{1}\) y \(G_{2}\) son grupos, entonces se
+puede definir una estructura de grupo en el producto cartesiano
+\(G_{1}\times G_{2}\), definiendo
+\((g_{1},g_{2})(g_{1}',g_{2}')\) como \((g_{1}g_{1}',g_{2}g_{2}')\).</li>
+</ul>
+</div>
+</div>
+</div>
