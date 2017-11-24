@@ -6,6 +6,14 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://rvf0068.github.io/authors/rafael.xml</loc>
+  <lastmod>2017-11-24T23:54:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://rvf0068.github.io/authors/roberto-alsina.xml</loc>
+  <lastmod>2017-11-24T23:47:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://rvf0068.github.io/categories/blog.xml</loc>
   <lastmod>2017-11-01T23:54:00Z</lastmod>
  </sitemap>
@@ -18,6 +26,10 @@
   <lastmod>2017-11-01T23:54:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://rvf0068.github.io/categories/mathjax.xml</loc>
+  <lastmod>2017-11-24T23:50:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://rvf0068.github.io/categories/nikola.xml</loc>
   <lastmod>2017-11-01T23:54:00Z</lastmod>
  </sitemap>
@@ -27,18 +39,18 @@
  </sitemap>
  <sitemap>
   <loc>https://rvf0068.github.io/galleries/demo/rss.xml</loc>
-  <lastmod>2017-11-01T23:54:00Z</lastmod>
+  <lastmod>2017-11-24T23:47:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://rvf0068.github.io/galleries/rss.xml</loc>
-  <lastmod>2017-11-01T23:54:00Z</lastmod>
+  <lastmod>2017-11-24T23:47:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://rvf0068.github.io/rss.xml</loc>
-  <lastmod>2017-11-01T23:54:00Z</lastmod>
+  <lastmod>2017-11-24T23:54:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://rvf0068.github.io/sitemap.xml</loc>
-  <lastmod>2017-11-01T23:54:00Z</lastmod>
+  <lastmod>2017-11-24T23:54:00Z</lastmod>
  </sitemap>
 </sitemapindex>
