@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Home Page">
+<meta name="viewport" content="width=device-width">
+<title>Rafael Villarroel | Rafael Villarroel</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://rvf0068.github.io/blog/">
+<!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><style>
+    div.input_prompt {
+      display: none;
+    }
+    </style>
+</head>
+<body>
+    <section class="social"><ul>
+<li><a href="../index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="../archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="../categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="../rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+            <li><a href="https://getnikola.com" title="About me"><i class="icon-user"></i></a></li>
+            <li><a href="https://twitter.com/getnikola" title="My Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="https://github.com/getnikola" title="My Github"><i class="icon-github"></i></a></li>
+
+        </ul></section><section class="page-content"><div class="content" rel="main">
+        <div class="post">
+            <h1 class="title"><a href="2017-08-01-introduccion/">Algoritmos combinatorios</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2017-08-01T15:00:00-05:00">2017-08-01 15:00</time>
+</div>
+                <div class="stats">
+                                <a href="2017-08-01-introduccion/#disqus_thread" data-disqus-identifier="cache/posts/2017-08-01-introduccion.html">Comments</a>
+
+
+                </div>
+            
+            </div>
+            <div class="body">
+                <div id="outline-container-org3d50b0e" class="outline-2">
+<h2 id="org3d50b0e">
+<span class="section-number-2">1</span> Introducción</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orga2054e8" class="outline-3">
+<h3 id="orga2054e8">
+<span class="section-number-3">1.1</span> Algoritmo según DRAE</h3>
+<div class="outline-text-3" id="text-1-1">
+
+<div class="figure">
+<p><img src="../images/2017-08-01-algoritmo.png" alt="2017-08-01-algoritmo.png"></p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0bc3de5" class="outline-3">
+<h3 id="org0bc3de5">
+<span class="section-number-3">1.2</span> Un ejemplo de algoritmo</h3>
+<div class="outline-text-3" id="text-1-2">
+
+<div class="figure">
+<p><img src="../images/2017-08-01-pastes.png" alt="2017-08-01-pastes.png"></p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orga9c8b80" class="outline-3">
+<h3 id="orga9c8b80">
+<span class="section-number-3">1.3</span> </h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Nosotros estamos interesados en algoritmos para resolver problemas
+matemáticos.</li>
+<li>Problemas matemáticos:
+<ul class="org-ul">
+<li>Encontrar las soluciones de la ecuación \(x^{2}-5x+4=0\).</li>
+<li>Encontrar la integral de \(e^{x}\) en el intervalo \([0,10]\).</li>
+<li>Encontrar los valores de \(x,y\) que sumen \(10\) de tal modo
+que su producto \(xy\) sea máximo.</li>
+<li>Dadas dos matrices cuadradas\(A,B\) determinar si existe una
+matriz invertible \(Q\) tal que \(A=Q^{-1}BQ\).</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org753c36b" class="outline-3">
+<h3 id="org753c36b">
+<span class="section-number-3">1.4</span> Combinatoria</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>La combinatoria es la rama de las matemáticas en la que se estudian
+problemas donde los conjuntos que aparecen son finitos, y los
+métodos de solución utilizan de manera esencial tal finitud.</li>
+<li>La finitud implica que la computadora es una herramienta
+importante en problemas combinatorios.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org088641e" class="outline-3">
+<h3 id="org088641e">
+<span class="section-number-3">1.5</span> La razón de estudiar algoritmos</h3>
+<div class="outline-text-3" id="text-1-5">
+<blockquote>
+<p>
+… writing programs is not the target of computer science; solving
+problems efficiently and effectively with the limited resources
+found in a computer is the real goal. 
+</p>
+
+<p>
+– (Frieder, Frieder and Grossman, <i>Computer Science Programming
+Basics with Ruby</i>, p.87)
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-orgb8ba951" class="outline-3">
+<h3 id="orgb8ba951">
+<span class="section-number-3">1.6</span> “Definición” de algoritmo</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>Debe estar descrito en términos claros, de modo que pueda convertirse
+en un programa para una computadora.</li>
+<li>Dada una condición inicial válida, debe finalizar después de una
+cantidad finita de pasos.</li>
+<li>Debe finalizar con la respuesta correcta.</li>
+<li>Es conveniente</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcc55fc6" class="outline-2">
+<h2 id="orgcc55fc6">
+<span class="section-number-2">2</span> Primer problema: ordenar una lista</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org350b8d9" class="outline-3">
+<h3 id="org350b8d9">
+<span class="section-number-3">2.1</span> Ejemplo</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Dar un algoritmo que, dados:
+<ul class="org-ul">
+<li>un conjunto finito \(X\) con \(n\)-elementos</li>
+<li>y una relación de orden total \(
+</li>
+</ul>
+</li>
+<li>regrese una \(n\)-ada ordenada \((x_{1},x_{2},\ldots,x_{n})\) de
+los elementos de \(X\).</li>
+<li>Por ejemplo, ordenar \(X=\{1,2,4,3,5\}\subseteq \mathbb{R}\).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org40fb13e" class="outline-3">
+<h3 id="org40fb13e">
+<span class="section-number-3">2.2</span> Una posible solución</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>El mínimo de una lista con \(n\) elementos se puede obtener con
+\(n-1\) comparaciones.</li>
+<li>¿Se puede obtener con menos comparaciones? (por un algoritmo que
+funcione para todas las listas)</li>
+<li>
+<p>
+Se deduce que un conjunto con \(n\) elementos se puede ordenar
+con a lo más
+</p>
+\begin{equation*}
+(n-1)+(n-2)+(n-3)+\cdots+2+1=\frac{n(n-1)}{2}
+\end{equation*}
+<p>
+comparaciones.
+</p>
+</li>
+<li>Es decir, hemos obtenido un algoritmo cuadrático para ordenar listas.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org0df860d" class="outline-3">
+<h3 id="org0df860d">
+<span class="section-number-3">2.3</span> </h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<ol class="org-ol">
+<li>
+<a id="org111d21c"></a><br><div class="outline-text-4" id="text-2-3-1">
+
+<div class="figure">
+<p><img src="2017-08-01-introduccion/%7B%7B%20site.baseurl%20%7D%7D/images/knuth.jpg" alt="knuth.jpg"></p>
+</div>
+</div>
+</li>
+
+<li>
+<a id="org6a12cec"></a><br><div class="outline-text-4" id="text-2-3-2">
+
+<div class="figure">
+<p><img src="2017-08-01-introduccion/%7B%7B%20site.baseurl%20%7D%7D/images/ArtOfComputerProgramming.jpg" alt="ArtOfComputerProgramming.jpg"></p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org0e78c72" class="outline-3">
+<h3 id="org0e78c72">
+<span class="section-number-3">2.4</span> Cita de Knuth</h3>
+<div class="outline-text-3" id="text-2-4">
+<blockquote>
+<p>
+Computer manufacturers estimate that over 25 percent of the running
+time on their computers is currently being spent on sorting, when all
+their customers are taken into account. There are many installations
+in which sorting uses over half of the computing time. From these
+statistics we may conclude either that <b>(i)</b> there are many important
+applications of sorting, or <b>(ii)</b> many people sort when they shouldn’t,
+or <b>(iii)</b> inneficient sorting algorithms are in common use. The real
+truth probably involves some of the three alternatives.
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0a17481" class="outline-2">
+<h2 id="org0a17481">
+<span class="section-number-2">3</span> Otros problemas</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org3070f26" class="outline-3">
+<h3 id="org3070f26">
+<span class="section-number-3">3.1</span> El problema de las carreteras</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<ol class="org-ol">
+<li>
+<a id="org7a2b849"></a><br><div class="outline-text-4" id="text-3-1-1">
+<p>
+Supongamos que tenemos 6 ciudades, que queremos conectar con
+carreteras de manera que sea posible viajar de una a otra.
+</p>
+</div>
+</li>
+
+<li>
+<a id="org19d9ef5"></a><br><div class="outline-text-4" id="text-3-1-2">
+
+<div class="figure">
+<p><img src="2017-08-01-introduccion/%7B%7B%20site.baseurl%20%7D%7D/images/ciudades.png" alt="ciudades" width="400" align="center"></p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org7ac40ae" class="outline-3">
+<h3 id="org7ac40ae">
+<span class="section-number-3">3.2</span> Costos</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Imaginemos que los costos de construir las carreteras están dados
+por los siguientes datos:
+</p>
+</div>
+
+
+
+<ol class="org-ol">
+<li>
+<a id="orgd3aba74"></a><br><div class="outline-text-4" id="text-3-2-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-right">
+</colgroup>
+<thead><tr>
+<th scope="col" class="org-left">De</th>
+<th scope="col" class="org-left">A</th>
+<th scope="col" class="org-right"> </th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="org-left">a0</td>
+<td class="org-left">a1</td>
+<td class="org-right">1</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a2</td>
+<td class="org-right">3</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a3</td>
+<td class="org-right">2</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a4</td>
+<td class="org-right">20</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a5</td>
+<td class="org-right">2</td>
+</tr>
+<tr>
+<td class="org-left">a1</td>
+<td class="org-left">a2</td>
+<td class="org-right">4</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a3</td>
+<td class="org-right">2</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a4</td>
+<td class="org-right">4</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a5</td>
+<td class="org-right">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+<li>
+<a id="orge45d696"></a><br><div class="outline-text-4" id="text-3-2-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-right">
+</colgroup>
+<thead><tr>
+<th scope="col" class="org-left">De</th>
+<th scope="col" class="org-left">A</th>
+<th scope="col" class="org-right"> </th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="org-left">a2</td>
+<td class="org-left">a3</td>
+<td class="org-right">3</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a4</td>
+<td class="org-right">6</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a5</td>
+<td class="org-right">2</td>
+</tr>
+<tr>
+<td class="org-left">a3</td>
+<td class="org-left">a4</td>
+<td class="org-right">4</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a5</td>
+<td class="org-right">5</td>
+</tr>
+<tr>
+<td class="org-left">a4</td>
+<td class="org-left">a5</td>
+<td class="org-right">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+<li>
+<a id="org1d6a968"></a><br><div class="outline-text-4" id="text-3-2-3">
+
+<div class="figure">
+<p><img src="2017-08-01-introduccion/%7B%7B%20site.baseurl%20%7D%7D/images/ciudades-02.png" alt="ciudades-02" width="400" align="center"></p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgc099c6f" class="outline-3">
+<h3 id="orgc099c6f">
+<span class="section-number-3">3.3</span> El algoritmo mejor</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>En general, una gráfica con \(n\) vértices tiene \(n^{n-2}\)
+<b>árboles generadores</b>.</li>
+<li>Se puede demostrar que el <b>algoritmo glotón</b> siempre escoge el
+árbol de menor costo.</li>
+<li>El algoritmo glotón es muy eficiente aún para gráficas de
+millones de vértices.</li>
+<li>Otra manera de proceder es ir eliminando primero la carretera
+más costosa. Después la siguiente más costosa. Y así
+sucesivamente hasta que encontremos una que <i>absolutamente</i> debamos
+construir. Continuar el procedimiento.</li>
+<li>El algoritmo siempre termina con un árbol generador, tal vez
+distinto al obtenido anteriormente, pero del mismo costo.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4b8b3ee" class="outline-3">
+<h3 id="org4b8b3ee">
+<span class="section-number-3">3.4</span> El problema del agente viajero</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Queremos recorrer las seis ciudades y regresar
+al punto de partida. Los costos de viajar entre ciudades están
+dados:
+</p>
+</div>
+
+<ol class="org-ol">
+<li>
+<a id="org8a95602"></a><br><div class="outline-text-4" id="text-3-4-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-right">
+</colgroup>
+<thead><tr>
+<th scope="col" class="org-left">De</th>
+<th scope="col" class="org-left">A</th>
+<th scope="col" class="org-right"> </th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="org-left">a0</td>
+<td class="org-left">a1</td>
+<td class="org-right">1</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a2</td>
+<td class="org-right">3</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a3</td>
+<td class="org-right">2</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a4</td>
+<td class="org-right">20</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a5</td>
+<td class="org-right">2</td>
+</tr>
+<tr>
+<td class="org-left">a1</td>
+<td class="org-left">a2</td>
+<td class="org-right">4</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a3</td>
+<td class="org-right">2</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a4</td>
+<td class="org-right">4</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a5</td>
+<td class="org-right">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+<li>
+<a id="org7a13e90"></a><br><div class="outline-text-4" id="text-3-4-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-right">
+</colgroup>
+<thead><tr>
+<th scope="col" class="org-left">De</th>
+<th scope="col" class="org-left">A</th>
+<th scope="col" class="org-right"> </th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="org-left">a2</td>
+<td class="org-left">a3</td>
+<td class="org-right">3</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a4</td>
+<td class="org-right">6</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a5</td>
+<td class="org-right">2</td>
+</tr>
+<tr>
+<td class="org-left">a3</td>
+<td class="org-left">a4</td>
+<td class="org-right">4</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a5</td>
+<td class="org-right">5</td>
+</tr>
+<tr>
+<td class="org-left">a4</td>
+<td class="org-left">a5</td>
+<td class="org-right">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+<li>
+<a id="orgaef0615"></a><br><div class="outline-text-4" id="text-3-4-3">
+
+<div class="figure">
+<p><img src="2017-08-01-introduccion/%7B%7B%20site.baseurl%20%7D%7D/images/ciudades-03.png" alt="ciudades-03" width="400" align="center"></p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org073a382" class="outline-3">
+<h3 id="org073a382">
+<span class="section-number-3">3.5</span> Si el agente viajero usara el algoritmo glotón</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<ol class="org-ol">
+<li>
+<a id="orgf00a9b4"></a><br><div class="outline-text-4" id="text-3-5-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-right">
+</colgroup>
+<thead><tr>
+<th scope="col" class="org-left">De</th>
+<th scope="col" class="org-left">A</th>
+<th scope="col" class="org-right"> </th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="org-left">a0</td>
+<td class="org-left">a1</td>
+<td class="org-right">1</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a2</td>
+<td class="org-right">3</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a3</td>
+<td class="org-right">2</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a4</td>
+<td class="org-right">20</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a5</td>
+<td class="org-right">2</td>
+</tr>
+<tr>
+<td class="org-left">a1</td>
+<td class="org-left">a2</td>
+<td class="org-right">4</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a3</td>
+<td class="org-right">2</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a4</td>
+<td class="org-right">4</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a5</td>
+<td class="org-right">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+<li>
+<a id="org99d7024"></a><br><div class="outline-text-4" id="text-3-5-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-right">
+</colgroup>
+<thead><tr>
+<th scope="col" class="org-left">De</th>
+<th scope="col" class="org-left">A</th>
+<th scope="col" class="org-right"> </th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="org-left">a2</td>
+<td class="org-left">a3</td>
+<td class="org-right">3</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a4</td>
+<td class="org-right">6</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a5</td>
+<td class="org-right">2</td>
+</tr>
+<tr>
+<td class="org-left">a3</td>
+<td class="org-left">a4</td>
+<td class="org-right">4</td>
+</tr>
+<tr>
+<td class="org-left"> </td>
+<td class="org-left">a5</td>
+<td class="org-right">5</td>
+</tr>
+<tr>
+<td class="org-left">a4</td>
+<td class="org-left">a5</td>
+<td class="org-right">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+
+<li>
+<a id="orgdcb42f5"></a><br><div class="outline-text-4" id="text-3-5-3">
+
+<div class="figure">
+<p><img src="2017-08-01-introduccion/%7B%7B%20site.baseurl%20%7D%7D/images/ciudades-04.png" alt="ciudades-04" width="400" align="center"></p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgdfe0173" class="outline-3">
+<h3 id="orgdfe0173">
+<span class="section-number-3">3.6</span> Notas sobre el problema del agente viajero</h3>
+<div class="outline-text-3" id="text-3-6">
+<ul class="org-ul">
+<li>No se conoce un algoritmo ``eficiente’’ que resuelva todas las
+instancias del problema.</li>
+<li>Tampoco se ha demostrado que no exista tal algoritmo.</li>
+<li>Sin embargo, se han encontrado algoritmos aceptables si los
+costos satisfacen ciertas hipótesis.</li>
+</ul>
+</div>
+</div>
+</div>
+            </div>
+        </div>
+        <div class="post">
+            <h1 class="title"><a href="2016-08-04-grupos/">Grupos</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2016-08-04T15:00:00-05:00">2016-08-04 15:00</time>
+</div>
+                <div class="stats">
+                                <a href="2016-08-04-grupos/#disqus_thread" data-disqus-identifier="cache/posts/2016-08-04-grupos.html">Comments</a>
+
+
+                </div>
+                    <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="../categories/mathjax/" rel="tag">mathjax</a></li>
+        </ul>
+</div>
+
+            </div>
+            <div class="body">
+                <div id="outline-container-org787f9bf" class="outline-2">
+<h2 id="org787f9bf">
+<span class="section-number-2">1</span> Definición de grupo</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgd2e6807" class="outline-3">
+<h3 id="orgd2e6807">
+<span class="section-number-3">1.1</span> Grupos</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<ol class="org-ol"><li>
+<a id="org6064d4d"></a>Grupo<br><div class="outline-text-4" id="text-1-1-1">
+<p>
+Un <b>grupo</b> es un conjunto \(G\) junto con una operación binaria
+\(G\times G\to G\), \((a,b)\mapsto ab\), tal que:
+</p>
+<ul class="org-ul">
+<li>\((ab)c=a(bc)\) para todos \(a,b,c\in G\)</li>
+<li>existe un elemento \(1\in G\) tal que \(a1=1a=a\) para todo
+\(a\in G\)</li>
+<li>para todo \(a\in G\) existe un elemento \(a^{-1}\in G\) tal que
+\(aa^{-1}=a^{-1}a=1\).</li>
+</ul>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-org48d87fb" class="outline-3">
+<h3 id="org48d87fb">
+<span class="section-number-3">1.2</span> Ejemplos</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<ol class="org-ol"><li>
+<a id="orgaad9a64"></a>Ejemplos de grupos<br><div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li>Sea \(X\) un conjunto. Sea \(S_{X}\) el conjunto:
+\[
+      S_{X}=\{f\colon X\to X\mid \text{\(f\) es biyectiva}\}.
+      \]
+Entonces \(S_{X}\) es un grupo con la operación de composición.</li>
+<li>En el caso de que \(X=\{1,2,\ldots,n\}\), denotaremos a
+\(S_{X}\) como \(S_{n}\). \(S_{n}\) se llama <b>grupo simétrico</b>.</li>
+</ul>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-org5cae3eb" class="outline-3">
+<h3 id="org5cae3eb">
+<span class="section-number-3">1.3</span> </h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<ol class="org-ol"><li>
+<a id="org958f09c"></a>Otros ejemplos<br><div class="outline-text-4" id="text-1-3-1">
+<ul class="org-ul">
+<li>Sean \(n\) un número natural y \(F\) un campo (como por ejemplo
+\(\mathbb{Q}, \mathbb{R}, \mathbb{C}\)). El conjunto
+\(\mathrm{GL}_{n}(F)\) de matrices cuadradas \(n\times n\)
+invertibles es un grupo con la operación producto de matrices.</li>
+<li>Sea \(V\) un espacio vectorial y \(\mathrm{GL}(V)\) el conjunto
+de transformaciones lineales invertibles \(V\to V\). Entonces
+\(\mathrm{GL}(V)\) es un grupo con la operación de composición.</li>
+<li>
+<p>
+Sea 
+\(G=\{\unicode{x263a},\bigtriangleup\}\). La tabla:
+</p>
+<table id="orgbb09f43" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup>
+<col class="org-left">
+<col class="org-left">
+<col class="org-left">
+</colgroup>
+<thead><tr>
+<th scope="col" class="org-left">\(\cdot\)</th>
+<th scope="col" class="org-left"> \(\unicode{x263a}\)</th>
+<th scope="col" class="org-left">\(\bigtriangleup\)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="org-left"> \(\unicode{x263a}\)</td>
+<td class="org-left"> \(\unicode{x263a}\)</td>
+<td class="org-left">\(\bigtriangleup\)</td>
+</tr>
+<tr>
+<td class="org-left">\(\bigtriangleup\)</td>
+<td class="org-left">\(\bigtriangleup\)</td>
+<td class="org-left"> \(\unicode{x263a}\)</td>
+</tr>
+</tbody>
+</table>
+<p>
+define una estructura de grupo en \(G\).
+</p>
+</li>
+<li>Si \(\omega\in \mathbb{C}\) es una raíz primitiva \(n\)-ésima de la unidad,
+entonces \(C_{n}=\{1,\omega,\omega^{2},\ldots,\omega^{n-1}\}\)
+es un grupo bajo la multiplicación de números complejos.</li>
+</ul>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-org8101d26" class="outline-3">
+<h3 id="org8101d26">
+<span class="section-number-3">1.4</span> Definiciones sobre grupos</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<ol class="org-ol"><li>
+<a id="org47cb64f"></a>Varias definiciones<br><div class="outline-text-4" id="text-1-4-1">
+<ul class="org-ul">
+<li>Si se tiene que \(ab=ba\) para todos \(a,b\in G\), decimos que
+el grupo \(G\) es <b>abeliano</b>.</li>
+<li>Nota: Si el grupo \(G\) es abeliano, se acostumbra usar
+<b>notación aditiva</b>, es decir, la operación se escribe \(a+b\) y
+el neutro como \(0\).</li>
+<li>Si el conjunto subyacente un grupo es finito, decimos que el
+grupo es <b>finito</b>.</li>
+<li>Si el grupo \(G\) es finito, la cantidad de sus elementos se
+llama el <b>orden</b> de \(G\), y lo denotamos \(|G|\).</li>
+</ul>
+</div>
+</li></ol>
+</div>
+</div>
+
+<div id="outline-container-org1d458f4" class="outline-2">
+<h2 id="org1d458f4">
+<span class="section-number-2">2</span> Propiedades elementales de los grupos</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org46e91cb" class="outline-3">
+<h3 id="org46e91cb">
+<span class="section-number-3">2.1</span> Propiedades elementales</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<ol class="org-ol"><li>
+<a id="orga5ad24e"></a>Propiedades<br><div class="outline-text-4" id="text-2-1-1">
+<p>
+En adelante, sean \(G\) un grupo, \(a,b,c\in G\) y \(m,n\in
+    \mathbb{Z}\). 
+</p>
+
+<ul class="org-ul">
+<li>(Ley de cancelación) Si \(ab=ac\), o bien si \(ba=ca\), entonces
+\(b=c\).</li>
+<li>(Unicidades) La operación de un grupo tiene un único
+neutro. Todo elemento tiene un único inverso.</li>
+<li>(Asociatividad generalizada) Todas las maneras de escribir
+paréntesis para realizar el producto de los elementos
+\(a_{1},a_{2},\ldots,a_{n}\in G\), en tal orden, llevan al mismo
+resultado.</li>
+<li>Por lo tanto, tal producto se denota \(a_{1}a_{2}\cdots a_{n}\).</li>
+<li>En particular, el producto \(aa\cdots a\) con \(n\) factores, se
+denota \(a^{n}\), y \((a^{n})^{-1}\) se denota \(a^{-n}\).</li>
+<li>(Leyes de los exponentes) \(a^{m}a^{n}=a^{m+n}\),
+\((a^{m})^{n}=a^{mn}\).</li>
+</ul>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-org764e6b8" class="outline-3">
+<h3 id="org764e6b8">
+<span class="section-number-3">2.2</span> Ejercicios 1</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Demuestra que en cualquier grupo \(G\) se tiene
+\((ab)^{-1}=b^{-1}a^{-1}\) para todos \(a,b\in G\).</li>
+<li>Sea \(S=\mathbb{R}-\{-1\}\). Definimos la operación \(*\) en
+\(S\) como:
+\[
+      a*b = a+b+ab.
+      \]
+Demuestra que \((S,*)\) es un grupo.</li>
+<li>Si \(G\) es un grupo, demuestra que existe un único \(a\in G\)
+tal que \(a^{2}=a\).</li>
+<li>Si \(G\) es un grupo tal que \(a=a^{-1}\) para todo \(a\in G\),
+demuestra que \(G\) es abeliano.</li>
+<li>Si \(G\) es un grupo tal que \(|G|\in\{2,3\}\), demuestra que
+\(G \) es abeliano.</li>
+<li>Sea \(G\) un grupo finito con \(|G|\) par. Demuestra que existe
+\(a\in G\), \(a\ne 1\) tal que \(a^{2}=1\).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1d5e808" class="outline-3">
+<h3 id="org1d5e808">
+<span class="section-number-3">2.3</span> Ejercicios 2</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Sea \(G\) un conjunto con una operación binaria asociativa tal
+que existe un elemento \(1\in G\) tal que \(a1=a\) para todo
+\(a\in G\), y dado \(a\in G\), existe \(a^{-1}\in G\) tal que
+\(aa^{-1}=1\). Demuestra que \(G\) con tal operación binaria es
+un grupo.</li>
+<li>Muestra con un ejemplo que si en el ejercicio anterior cambiamos
+la condición \(a1=a\) por \(1a=a\), entonces no necesariamente es
+\(G\) un grupo.</li>
+<li>Demuestra que si el grupo \(G\) es abeliano, entonces
+\((ab)^{n}=a^{n}b^{n}\) para todos \(a,b\in G\) y \(n\in
+     \mathbb{Z}\).</li>
+<li>Demuestra que si \(G_{1}\) y \(G_{2}\) son grupos, entonces se
+puede definir una estructura de grupo en el producto cartesiano
+\(G_{1}\times G_{2}\), definiendo
+\((g_{1},g_{2})(g_{1}',g_{2}')\) como \((g_{1}g_{1}',g_{2}g_{2}')\).</li>
+</ul>
+</div>
+</div>
+</div>
+            </div>
+        </div>
+        <div class="post">
+            <h1 class="title"><a href="welcome-to-nikola/">Welcome to Nikola</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2012-03-30T23:00:00-03:00">2012-03-30 23:00</time>
+</div>
+                <div class="stats">
+                                <a href="welcome-to-nikola/#disqus_thread" data-disqus-identifier="cache/posts/1.html">Comments</a>
+
+
+                </div>
+                    <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="../categories/blog/" rel="tag">blog</a></li>
+           <li><a class="tag p-category" href="../categories/demo/" rel="tag">demo</a></li>
+           <li><a class="tag p-category" href="../categories/nikola/" rel="tag">nikola</a></li>
+           <li><a class="tag p-category" href="../categories/python/" rel="tag">python</a></li>
+        </ul>
+</div>
+
+            </div>
+            <div class="body">
+                <div>
+<div class="figure">
+<a class="reference external image-reference" href="https://farm1.staticflickr.com/138/352972944_4f9d568680_z.jpg?zz=1"><img alt="Nikola Tesla Corner by nicwest, on Flickr" class="thumbnail" src="https://farm1.staticflickr.com/138/352972944_4f9d568680.jpg"></a>
+</div>
+<p>If you can see this in a web browser, it means you managed to install Nikola,
+and build a site using it. Congratulations!</p>
+<p>Next steps:</p>
+<ul class="simple">
+<li><a class="reference external" href="../pages/handbook/">Read the manual</a></li>
+<li><a class="reference external" href="https://getnikola.com">Visit the Nikola website to learn more</a></li>
+<li><a class="reference external" href="../galleries/demo/">See a demo photo gallery</a></li>
+<li><a class="reference external" href="../pages/listings-demo/">See a demo listing</a></li>
+<li><a class="reference external" href="../pages/slides-demo/">See a demo slideshow</a></li>
+<li><a class="reference external" href="../pages/dr-nikolas-vendetta/">See a demo of a longer text</a></li>
+</ul>
+<p>Send feedback to <a class="reference external" href="mailto:info@getnikola.com">info@getnikola.com</a>!</p>
+</div>
+            </div>
+        </div>
+    
+                   <script>var disqus_shortname="rvf0068";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2017         <a href="mailto:rvf0068@gmail.com">Rafael</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </section><script src="../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+    </script><script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>
