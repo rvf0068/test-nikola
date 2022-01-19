@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+ <sitemap>
+  <loc>https://rvf0068.github.io/test-nikola/categories/blog.xml</loc>
+  <lastmod>2022-01-19T02:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://rvf0068.github.io/test-nikola/categories/cat_nikola.xml</loc>
+  <lastmod>2022-01-19T02:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://rvf0068.github.io/test-nikola/categories/demo.xml</loc>
+  <lastmod>2022-01-19T02:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://rvf0068.github.io/test-nikola/categories/nikola.xml</loc>
+  <lastmod>2022-01-19T02:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://rvf0068.github.io/test-nikola/categories/python.xml</loc>
+  <lastmod>2022-01-19T02:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://rvf0068.github.io/test-nikola/galleries/demo/rss.xml</loc>
+  <lastmod>2022-01-19T02:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://rvf0068.github.io/test-nikola/galleries/rss.xml</loc>
+  <lastmod>2022-01-19T02:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://rvf0068.github.io/test-nikola/rss.xml</loc>
+  <lastmod>2022-01-19T02:39:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://rvf0068.github.io/test-nikola/sitemap.xml</loc>
+  <lastmod>2022-01-19T02:39:00Z</lastmod>
+ </sitemap>
+</sitemapindex>

@@ -1,0 +1,4 @@
+Sitemap: https://rvf0068.github.io/test-nikola/sitemapindex.xml
+
+User-Agent: *
+Host: rvf0068.github.io
